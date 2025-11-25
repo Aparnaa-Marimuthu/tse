@@ -5,7 +5,7 @@ import { DEFAULT_CONFIG } from '../../../services/configurationService';
 // Server-side helper function to load config from GitHub  
 async function loadConfigFromGitHubServer(filename: string) {  
   const repoOwner = "Aparnaa-Marimuthu";  
-  const repoName = "TSE_Demo";  
+  const repoName = "tse";  
   const configsPath = "saved-configs";  
   
   const response = await fetch(  

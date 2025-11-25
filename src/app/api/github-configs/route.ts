@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 export async function GET() {  
   try {  
     const repoOwner = "Aparnaa-Marimuthu";  
-    const repoName = "TSE_Demo";  
+    const repoName = "tse";  
     const configsPath = "saved-configs";  
   
     const response = await fetch(  
