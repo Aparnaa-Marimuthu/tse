@@ -565,6 +565,7 @@ export default function Layout({ children }: LayoutProps) {
                 enabled: menu.enabled,
                 contentSelection: menu.contentSelection,
                 openDirectly: menu.openDirectly,
+                runtimeFilters: menu.runtimeFilters || [],
               };
 
               if (!seenIds.has(normalizedMenu.id)) {
@@ -779,6 +780,7 @@ export default function Layout({ children }: LayoutProps) {
             enabled: menu.enabled,
             contentSelection: menu.contentSelection,
             openDirectly: menu.openDirectly,
+            runtimeFilters: menu.runtimeFilters || [],
           };
 
           if (!seenIds.has(normalizedMenu.id)) {
