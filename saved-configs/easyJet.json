@@ -101,7 +101,30 @@
         }
       },
       "openDirectly": true,
-      "runtimeFilters": [],
+      "runtimeFilters": [
+        {
+          "columnName": "Airline Name",
+          "operator": "IN",
+          "values": [],
+          "dropdownOptions": [
+            "easyJet",
+            "emirates"
+          ]
+        },
+        {
+          "columnName": "Departure Station Name",
+          "operator": "EQ",
+          "values": [],
+          "dropdownOptions": [
+            "london gatwick airport",
+            "dubai international",
+            "London Luton Airport",
+            "london stansted airport"
+          ]
+        }
+      ]
+    }
+  ],
   "menuOrder": [
     "home",
     "favorites",
