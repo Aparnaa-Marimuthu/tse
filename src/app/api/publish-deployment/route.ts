@@ -1,6 +1,45 @@
 import { NextRequest, NextResponse } from 'next/server';    
 import { Octokit } from '@octokit/rest';    
 import { DEFAULT_CONFIG } from '../../../services/configurationService';    
+
+const runtimeFilterOperators = new Set([
+  'EQ',
+  'NE',
+  'LT',
+  'LE',
+  'GT',
+  'GE',
+  'CONTAINS',
+  'BEGINS_WITH',
+  'ENDS_WITH',
+  'BW_INC_MAX',
+  'BW_INC_MIN',
+  'BW_INC',
+  'BW',
+  'IN',
+  'NOT_IN',
+]);
+
+function serializeConfigurationForTypeScript(configuration: unknown): string {
+  return JSON.stringify(configuration, null, 2).replace(
+    /"operator": "([^"]+)"/g,
+    (match, operator) =>
+      runtimeFilterOperators.has(operator)
+        ? `"operator": RuntimeFilterOp.${operator}`
+        : match
+  );
+}
+
+function ensureRuntimeFilterOpImport(content: string): string {
+  if (content.includes('RuntimeFilterOp')) {
+    return content;
+  }
+
+  return content.replace(
+    '  ConfigurationSource,\n} from "../types/thoughtspot";',
+    '  ConfigurationSource,\n  RuntimeFilterOp,\n} from "../types/thoughtspot";'
+  );
+}
   
 // Server-side helper function to load config from GitHub  
 async function loadConfigFromGitHubServer(filename: string) {  
@@ -108,7 +147,7 @@ export async function POST(request: NextRequest) {
       
       
     // 4. Prepare the updated content  
-    let content = Buffer.from(fileData.content, 'base64').toString();  
+    let content = ensureRuntimeFilterOpImport(Buffer.from(fileData.content, 'base64').toString());  
     if (!finalConfiguration) {  
       throw new Error('Configuration is undefined - cannot proceed with deployment');  
     }  
@@ -116,7 +155,7 @@ export async function POST(request: NextRequest) {
     // Set disableSettings to true for deployments  
     finalConfiguration.appConfig.disableSettings = true;  
      
-    const configString = JSON.stringify(finalConfiguration, null, 2);  
+    const configString = serializeConfigurationForTypeScript(finalConfiguration);  
     content = content.replace(  
       /export const DEFAULT_CONFIG: ConfigurationData = (?:\{[\s\S]*?\}|undefined);/,  
       `export const DEFAULT_CONFIG: ConfigurationData = ${configString};`  
