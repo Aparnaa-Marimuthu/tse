@@ -2434,7 +2434,9 @@ export default function Layout({ children }: LayoutProps) {
                   flexDirection: "column",
                 }}
               >
-                <div style={{ flex: 1 }}>{children}</div>
+                <div style={{ flex: 1, minHeight: 0, display: "flex" }}>
+                  {children}
+                </div>
                 {(appConfig.showFooter ?? true) && (
                   <Footer
                     backgroundColor={

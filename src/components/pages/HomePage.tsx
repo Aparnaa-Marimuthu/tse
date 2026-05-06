@@ -187,16 +187,17 @@ export default function HomePage({ onConfigUpdate }: HomePageProps) {
       case "html":
         if (mappedValue && mappedValue.trim()) {
           return (
-            <div
-              dangerouslySetInnerHTML={{ __html: mappedValue }}
+            <iframe
+              srcDoc={mappedValue}
               style={{
-                backgroundColor: "white",
-                padding: "20px",
-                borderRadius: "8px",
-                border: "1px solid #e2e8f0",
+                width: "100%",
                 height: "100%",
-                overflow: "auto",
+                minHeight: 0,
+                backgroundColor: "white",
+                border: "none",
+                display: "block",
               }}
+              title="Home page content"
             />
           );
         }
@@ -459,6 +460,7 @@ export default function HomePage({ onConfigUpdate }: HomePageProps) {
         display: "flex",
         minHeight: 0,
         flexDirection: "column",
+        height: "100%",
       }}
     >
       {renderContent()}
