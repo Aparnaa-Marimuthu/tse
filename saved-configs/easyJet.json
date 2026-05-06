@@ -83,7 +83,7 @@
         }
       },
       "openDirectly": true,
-      "runtimeFilters": [],
+      "runtimeFilters": []
     },
     {
       "id": "custom-1764062249277",
@@ -140,6 +140,7 @@
     "value": "<h1>Welcome to TSE Demo Builder</h1>"
   },
   "appConfig": {
+    "provider": "thoughtspot",
     "thoughtspotUrl": "https://techpartners.thoughtspot.cloud/",
     "applicationName": "Insights Portal",
     "logo": "",
