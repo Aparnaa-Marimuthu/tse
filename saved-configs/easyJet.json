@@ -119,7 +119,6 @@
     "value": "<h1>Welcome to TSE Demo Builder</h1>"
   },
   "appConfig": {
-    "provider": "thoughtspot",
     "thoughtspotUrl": "https://techpartners.thoughtspot.cloud/",
     "applicationName": "Insights Portal",
     "logo": "",
