@@ -152,9 +152,6 @@ export async function POST(request: NextRequest) {
       throw new Error('Configuration is undefined - cannot proceed with deployment');  
     }  
      
-    // Set disableSettings to true for deployments  
-    finalConfiguration.appConfig.disableSettings = true;  
-     
     const configString = serializeConfigurationForTypeScript(finalConfiguration);  
     content = content.replace(  
       /export const DEFAULT_CONFIG: ConfigurationData = (?:\{[\s\S]*?\}|undefined);/,  

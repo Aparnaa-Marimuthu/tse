@@ -455,7 +455,8 @@ export default function HomePage({ onConfigUpdate }: HomePageProps) {
     <div
       style={{
         flex: 1,
-        width: "100%",
+        width: "calc(100% + 48px)",
+        marginInline: "-24px",
         overflow: "hidden",
         display: "flex",
         minHeight: 0,
