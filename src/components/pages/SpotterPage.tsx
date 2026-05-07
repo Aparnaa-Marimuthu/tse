@@ -180,7 +180,17 @@ export default function SpotterPage({
   ]);
 
   return (
-    <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
+    <div
+      style={{
+        width: "100%",
+        flex: 1,
+        minWidth: 0,
+        minHeight: 0,
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       {!finalSpotterModelId ? (
         <div
           style={{
@@ -251,7 +261,15 @@ export default function SpotterPage({
         </div>
       ) : (
         <div
-          style={{ height: "100%", display: "flex", flexDirection: "column" }}
+          style={{
+            width: "100%",
+            flex: 1,
+            minWidth: 0,
+            minHeight: 0,
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+          }}
         >
           <h3
             style={{
@@ -296,14 +314,15 @@ export default function SpotterPage({
               key={`spotter-embed-${context.appConfig.thoughtspotUrl}-${
                 context.lastClusterChangeTime
               }-${JSON.stringify(context.stylingConfig.embeddedContent)}`}
-              ref={embedRef}
-              style={{
-                width: "100%",
-                flex: 1,
-                minHeight: "400px",
-                overflow: "hidden",
-              }}
-            />
+                ref={embedRef}
+                style={{
+                  width: "100%",
+                  flex: 1,
+                  minWidth: 0,
+                  minHeight: "400px",
+                  overflow: "hidden",
+                }}
+              />
           )}
         </div>
       )}
