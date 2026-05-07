@@ -1,0 +1,281 @@
+{
+  "standardMenus": [
+    {
+      "id": "home",
+      "name": "Home",
+      "enabled": true,
+      "icon": "home",
+      "homePageType": "html",
+      "homePageValue": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Supplier Portal</title>\n\n<style>\n    body {\n        margin: 0;\n        font-family: Arial, sans-serif;\n        background: #f4f6f8;\n        color: #2c3e50;\n    }\n\n    header {\n        background: linear-gradient(135deg, #78BE20, #5aa10f);\n        color: white;\n        padding: 25px 40px;\n    }\n\n    header h1 {\n        margin: 0;\n        font-size: 26px;\n    }\n\n    header p {\n        margin: 5px 0 0;\n        opacity: 0.9;\n    }\n\n    main {\n        max-width: 1200px;\n        margin: 30px auto;\n        padding: 0 20px;\n    }\n\n    .section {\n        margin-bottom: 30px;\n    }\n\n    .section h2 {\n        margin-bottom: 15px;\n    }\n\n    .grid {\n        display: grid;\n        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));\n        gap: 20px;\n    }\n\n    .tile {\n        background: white;\n        border-radius: 12px;\n        padding: 20px;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.08);\n        transition: transform 0.2s, box-shadow 0.2s;\n        cursor: pointer;\n    }\n\n    .tile:hover {\n        transform: translateY(-4px);\n        box-shadow: 0 6px 14px rgba(0,0,0,0.12);\n    }\n\n    .tile h3 {\n        margin-top: 0;\n        color: #34495e;\n    }\n\n    .tile p {\n        font-size: 14px;\n        color: #666;\n    }\n\n    .links a {\n        display: block;\n        padding: 8px 0;\n        color: #2980b9;\n        text-decoration: none;\n    }\n\n    .links a:hover {\n        text-decoration: underline;\n    }\n\n    .announcement {\n        background: #fff;\n        padding: 20px;\n        border-left: 5px solid #78BE20;\n        border-radius: 10px;\n        box-shadow: 0 2px 6px rgba(0,0,0,0.05);\n    }\n\n    footer {\n        text-align: center;\n        padding: 20px;\n        font-size: 14px;\n        color: #777;\n    }\n</style>\n</head>\n\n<body>\n\n<header>\n    <h1>Supplier Portal</h1>\n    <p>Your central hub for tools, insights, and updates</p>\n</header>\n\n<main>\n\n    <!-- Quick Access -->\n    <div class=\"section\">\n        <h2>Quick Access</h2>\n        <div class=\"grid\">\n            <div class=\"tile\">\n                <h3>Orders & Deliveries</h3>\n                <p>Manage orders, track shipments, and view delivery schedules.</p>\n            </div>\n\n            <div class=\"tile\">\n                <h3>Product Catalogue</h3>\n                <p>Update product details, pricing, and availability.</p>\n            </div>\n\n            <div class=\"tile\">\n                <h3>Forecasting Tools</h3>\n                <p>Upload forecasts and review demand planning insights.</p>\n            </div>\n\n            <div class=\"tile\">\n                <h3>Performance Reports</h3>\n                <p>Access reports and analytics across your product lines.</p>\n            </div>\n        </div>\n    </div>\n\n    <!-- Announcements -->\n    <div class=\"section\">\n        <h2>Latest Announcements</h2>\n        <div class=\"announcement\">\n            <strong>📢 System Update:</strong>\n            The portal will undergo maintenance on Sunday 02:00–04:00 GMT.\n            <br><br>\n            <strong>📦 New Feature:</strong>\n            Enhanced delivery tracking is now available.\n        </div>\n    </div>\n\n    <!-- Useful Links -->\n    <div class=\"section\">\n        <h2>Useful Links</h2>\n        <div class=\"card links\">\n            <a href=\"#\">Supplier Guidelines & Policies</a>\n            <a href=\"#\">Onboarding Documentation</a>\n            <a href=\"#\">EDI Integration Support</a>\n            <a href=\"#\">Contact Supplier Support</a>\n            <a href=\"#\">Training & Webinars</a>\n        </div>\n    </div>\n\n    <!-- External Systems -->\n    <div class=\"section\">\n        <h2>Connected Systems</h2>\n        <div class=\"grid\">\n            <div class=\"tile\">\n                <h3>Finance Portal</h3>\n                <p>View invoices, payments, and financial statements.</p>\n            </div>\n\n            <div class=\"tile\">\n                <h3>Logistics Platform</h3>\n                <p>Coordinate shipments and warehouse operations.</p>\n            </div>\n\n            <div class=\"tile\">\n                <h3>Compliance Hub</h3>\n                <p>Manage certifications and regulatory requirements.</p>\n            </div>\n        </div>\n    </div>\n\n</main>\n\n<footer>\n    © 2026 Supplier Portal | Internal Use Only\n</footer>\n\n</body>\n</html>"
+    },
+    {
+      "id": "favorites",
+      "name": "Favorites",
+      "enabled": false,
+      "icon": "favorites",
+      "homePageType": "html",
+      "homePageValue": "<h1>Favorites</h1>"
+    },
+    {
+      "id": "my-reports",
+      "name": "My Reports",
+      "enabled": false,
+      "icon": "my-reports",
+      "homePageType": "html",
+      "homePageValue": "<h1>My Reports</h1>"
+    },
+    {
+      "id": "spotter",
+      "name": "Ask Asda",
+      "enabled": true,
+      "icon": "spotter",
+      "homePageType": "html",
+      "homePageValue": "<h1>Spotter</h1>",
+      "spotterModelId": "d5e55a82-92da-4328-b1ca-a151bcc0ae36",
+      "spotterSearchQuery": ""
+    },
+    {
+      "id": "search",
+      "name": "Search",
+      "enabled": false,
+      "icon": "search",
+      "homePageType": "html",
+      "homePageValue": "<h1>Search</h1>"
+    },
+    {
+      "id": "full-app",
+      "name": "Full App",
+      "enabled": false,
+      "icon": "full-app",
+      "homePageType": "html",
+      "homePageValue": "<h1>Full App</h1>"
+    },
+    {
+      "id": "all-content",
+      "name": "All Content",
+      "enabled": false,
+      "icon": "📚",
+      "homePageType": "html",
+      "homePageValue": "<h1>All Content</h1>",
+      "excludeSystemContent": true
+    }
+  ],
+  "customMenus": [
+    {
+      "id": "custom-1778083184903",
+      "name": "Overview",
+      "description": "",
+      "icon": "dashboard",
+      "enabled": true,
+      "contentSelection": {
+        "type": "specific",
+        "specificContent": {
+          "liveboards": [
+            "821c5a6d-5ca3-48f8-8439-7ad8cbe5258f"
+          ],
+          "answers": []
+        }
+      },
+      "openDirectly": true,
+      "runtimeFilters": []
+    },
+    {
+      "id": "custom-1778083289496",
+      "name": "Details",
+      "description": "",
+      "icon": "analytics",
+      "enabled": true,
+      "contentSelection": {
+        "type": "specific",
+        "specificContent": {
+          "liveboards": [
+            "986503e5-791b-4e30-8a75-4af9b0c604eb"
+          ],
+          "answers": []
+        }
+      },
+      "openDirectly": true,
+      "runtimeFilters": []
+    }
+  ],
+  "menuOrder": [
+    "home",
+    "custom-1778083184903",
+    "custom-1778083289496",
+    "spotter"
+  ],
+  "homePageConfig": {
+    "type": "html",
+    "value": "<h1>Welcome to TSE Demo Builder</h1>"
+  },
+  "appConfig": {
+    "thoughtspotUrl": "https://techpartners.thoughtspot.cloud/",
+    "applicationName": "Asda Supplier Analytics Portal",
+    "logo": "",
+    "earlyAccessFlags": "",
+    "favicon": "data:image/jpeg;base64,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",
+    "showFooter": false,
+    "disableSettings": false,
+    "chatbot": {
+      "enabled": false,
+      "welcomeMessage": "Hello! I'm your AI assistant. What would you like to know about your data?",
+      "position": "bottom-right",
+      "primaryColor": "#3b82f6",
+      "hoverColor": "#2563eb",
+      "selectedModelIds": []
+    },
+    "authType": "None",
+    "faviconSyncEnabled": true
+  },
+  "fullAppConfig": {
+    "showPrimaryNavbar": true,
+    "hideHomepageLeftNav": false
+  },
+  "stylingConfig": {
+    "application": {
+      "topBar": {
+        "backgroundColor": "#78BE20",
+        "foregroundColor": "#ffffff",
+        "logoUrl": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCABQAFADASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAIDAQQFBv/EADMQAAEEAQIDAwoHAQAAAAAAAAEAAgMEEQUSEyExIkFRBhQVUnGBkZOhwUJEYWKx0fDh/8QAGAEBAQADAAAAAAAAAAAAAAAAAAECBAX/xAAeEQEAAgICAwEAAAAAAAAAAAAAARECEgMxBCFBIv/aAAwDAQACEQMRAD8A3kRFxXOEREBERAREQEREBEUZJGRRmSV7WMHVzjgBUSRUw2607tsNiKRwGcNeCfosz2Ia7Q6eVkYPTccZTWbqlWoqILtWySILEbyBkgO5/BR9IUR+cr/Nb/auuXVDZRRY9kjA+NzXNPQtOQVXNarwODZp4oyRkB7wP5UqboXIoxSxzMD4ntew9HNOQVJEFwfKqyGVI6wPaldk+wf9XeXjNXlkv6y9sDDJw+w1oGc46/XK2fEw25Ln4sI0OJpesQcXluDd3scPt9lnX+N6Xk44cW5Gwd239FVqfn8r2z3oHR8tgds2hbkmuNmEbLdRk0OwA7uTi7vIPct6stoziL9VLJbpUWlOvRy155GvaDiKUdTjuK52mUW6hffA6Qs7JdkDPQqqfhT3GjT4ZGB2NrScnKt0q63T7zppGOf2S3A8VlOOURM4z7oXQPm0XWeCZMsDgH46Oae/HvWNSdJqWr2OFzEbXbR+1o/3xWtbnlv2prewgDBPeGjoOat0zz+IunpQOk3AsLtm4eP9JrX7mtqHZ8lLIdXlrE82HcPYf99V314vSJZKGsxtnYWbjsc0jGM9PsvaLn+XhryXH1jIqY6laKTiRV4mP9ZrACrkWtEzHQhNDFOzZNGyRuc4cMjKqNGoYeCa0PDznbsGM+K2EVjKY6kUV6VWsSYII2E8iQ3mfeoHTaJOfM4PlhbSJvl3YpNOsYRCa8XCByGbBjPjhTiijgjDIY2sYPwtGApoptMiiSnVlk4kteJ7/WcwE/FXoiTMz2CIiiCIiAiIgIiICIiD/9k="
+      },
+      "sidebar": {
+        "backgroundColor": "#b9f570",
+        "foregroundColor": "#1a1a1a"
+      },
+      "footer": {
+        "backgroundColor": "#78BE20",
+        "foregroundColor": "#ffffff"
+      },
+      "dialogs": {
+        "backgroundColor": "#ffffff",
+        "foregroundColor": "#386402"
+      },
+      "buttons": {
+        "primary": {
+          "backgroundColor": "#059669",
+          "foregroundColor": "#ffffff",
+          "borderColor": "#059669",
+          "hoverBackgroundColor": "#047857",
+          "hoverForegroundColor": "#ffffff"
+        },
+        "secondary": {
+          "backgroundColor": "#d1fae5",
+          "foregroundColor": "#065f46",
+          "borderColor": "#a7f3d0",
+          "hoverBackgroundColor": "#a7f3d0",
+          "hoverForegroundColor": "#065f46"
+        }
+      },
+      "backgrounds": {
+        "mainBackground": "#f0fdf4",
+        "contentBackground": "#ffffff",
+        "cardBackground": "#ffffff",
+        "borderColor": "#a7f3d0"
+      },
+      "typography": {
+        "primaryColor": "#065f46",
+        "secondaryColor": "#374151",
+        "linkColor": "#059669",
+        "linkHoverColor": "#047857"
+      },
+      "selectedTheme": "green"
+    },
+    "embeddedContent": {
+      "strings": {},
+      "stringIDs": {},
+      "cssUrl": "",
+      "customCSS": {
+        "variables": {},
+        "rules_UNSTABLE": {}
+      }
+    },
+    "embedFlags": {
+      "liveboardEmbed": {
+        "showLiveboardTitle": false,
+        "showLiveboardDescription": false,
+        "isLiveboardHeaderSticky": false,
+        "hideLiveboardHeader": true,
+        "isLiveboardStylingAndGroupingEnabled": true
+      },
+      "searchEmbed": {
+        "hideDataSources": true,
+        "hideSearchBar": true
+      },
+      "appEmbed": {
+        "isLiveboardStylingAndGroupingEnabled": true
+      }
+    },
+    "embedDisplay": {
+      "hideTitle": true,
+      "hideDescription": true
+    }
+  },
+  "userConfig": {
+    "users": [
+      {
+        "id": "power-user",
+        "name": "Power User",
+        "description": "Full access - can access all features including Search and Full App",
+        "locale": "en",
+        "access": {
+          "standardMenus": {
+            "home": true,
+            "favorites": true,
+            "my-reports": true,
+            "spotter": true,
+            "search": true,
+            "full-app": true,
+            "all-content": true
+          },
+          "customMenus": [
+            "custom-1778083184903",
+            "custom-1778083289496"
+          ],
+          "hiddenActions": {
+            "enabled": false,
+            "actions": []
+          }
+        }
+      },
+      {
+        "id": "basic-user",
+        "name": "Basic User",
+        "description": "Limited access - cannot access Search and Full App",
+        "locale": "en",
+        "access": {
+          "standardMenus": {
+            "home": true,
+            "favorites": true,
+            "my-reports": true,
+            "spotter": false,
+            "search": false,
+            "full-app": false,
+            "all-content": true
+          },
+          "customMenus": [
+            "custom-1778083184903",
+            "custom-1778083289496"
+          ],
+          "hiddenActions": {
+            "enabled": false,
+            "actions": []
+          },
+          "runtimeFilters": [
+            {
+              "columnName": "Supplier Name",
+              "operator": "EQ",
+              "values": [
+                "Atlantic Oils"
+              ],
+              "dropdownOptions": []
+            }
+          ]
+        }
+      }
+    ],
+    "currentUserId": "power-user"
+  },
+  "version": "1.0.0",
+  "timestamp": "2026-05-07T10:30:10.013Z",
+  "description": "TSE Demo Builder Configuration Export"
+}
