@@ -24,18 +24,15 @@ export default function SpotterPage({
   let contextSpotterModelId: string | undefined;
   let contextSpotterSearchQuery: string | undefined;
   let contextEmbedFlags: Record<string, unknown> | undefined;
-  let contextSpotterDisplayName: string | undefined;
 
   try {
     const spotterMenu = context.standardMenus.find(
       (m: {
         id: string;
-        name?: string;
         spotterModelId?: string;
         spotterSearchQuery?: string;
       }) => m.id === "spotter"
     );
-    contextSpotterDisplayName = spotterMenu?.name;
     contextSpotterModelId = spotterMenu?.spotterModelId;
     contextSpotterSearchQuery = spotterMenu?.spotterSearchQuery;
     contextEmbedFlags = context.stylingConfig.embedFlags?.spotterEmbed;
@@ -47,8 +44,6 @@ export default function SpotterPage({
   const finalSpotterModelId = propSpotterModelId || contextSpotterModelId;
   const finalSpotterSearchQuery =
     propSpotterSearchQuery || contextSpotterSearchQuery;
-  const finalSpotterDisplayName =
-    contextSpotterDisplayName?.trim() || "Ask Data";
 
   // Memoize finalEmbedFlags to prevent re-renders
   const finalEmbedFlags = useMemo(() => {
@@ -104,19 +99,19 @@ export default function SpotterPage({
           // customizations so the iframe content can reflect the app label.
           const strings = {
             ...(context.stylingConfig.embeddedContent.strings || {}),
-            Spotter: finalSpotterDisplayName,
+            Spotter: "Ask Data",
             "Warming up Spotter, get ready with your question":
-              `Warming up ${finalSpotterDisplayName}, get ready with your question`,
+              "Warming up Ask Data, get ready with your question",
             "Meet Spotter, your AI analyst":
-              `Meet ${finalSpotterDisplayName}, your AI analyst`,
+              "Meet Ask Data, your AI analyst",
             "Spotter is your AI analyst. It can answer questions you have about your data source and help you find insights quickly. To start analyzing, ask a business question about your data.":
-              `${finalSpotterDisplayName} is your AI analyst. It can answer questions you have about your data source and help you find insights quickly. To start analyzing, ask a business question about your data.`,
+              "Ask Data is your AI analyst. It can answer questions you have about your data source and help you find insights quickly. To start analyzing, ask a business question about your data.",
           };
 
           // Override ThoughtSpot translation IDs
           const stringIDs = {
             ...(context.stylingConfig.embeddedContent.stringIDs || {}),
-            "convassist.spotter.askSpotter": finalSpotterDisplayName,
+            "convassist.spotter.askSpotter": "Ask Data",
           };
 
           // Filter out visibleActions from embed flags to prevent conflicts with hiddenActions
@@ -192,7 +187,6 @@ export default function SpotterPage({
     context.configVersion, // Add config version to force re-initialization on config changes
     finalSpotterModelId,
     finalSpotterSearchQuery,
-    finalSpotterDisplayName,
     finalEmbedFlags,
     context.stylingConfig.embeddedContent.customCSS,
     context.stylingConfig.embeddedContent.cssUrl,
@@ -298,10 +292,11 @@ export default function SpotterPage({
             style={{
               fontSize: "16px",
               fontWeight: "600",
-              marginBottom: "6px",
+              marginBottom: "12px",
+              padding: "0 0 12px 0",
             }}
           >
-            {finalSpotterDisplayName}
+            AI Analyst
             {finalSpotterSearchQuery && (
               <span
                 style={{
@@ -315,15 +310,6 @@ export default function SpotterPage({
               </span>
             )}
           </h3>
-          <p
-            style={{
-              fontSize: "14px",
-              color: "#4b5563",
-              margin: "0 0 16px 0",
-            }}
-          >
-            {`Meet ${finalSpotterDisplayName}, your AI analyst`}
-          </p>
 
           {iframeError ? (
             <div
