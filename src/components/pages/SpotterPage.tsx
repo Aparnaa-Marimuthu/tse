@@ -94,8 +94,25 @@ export default function SpotterPage({
           // Get custom CSS configuration from styling config
           const customCSS = context.stylingConfig.embeddedContent.customCSS;
           const cssUrl = context.stylingConfig.embeddedContent.cssUrl;
-          const strings = context.stylingConfig.embeddedContent.strings;
-          const stringIDs = context.stylingConfig.embeddedContent.stringIDs;
+
+          // Override visible Spotter branding text using supported string
+          // customizations so the iframe content can reflect the app label.
+          const strings = {
+            ...(context.stylingConfig.embeddedContent.strings || {}),
+            Spotter: "AI Analyst",
+            "Warming up Spotter, get ready with your question":
+              "Warming up AI Analyst, get ready with your question",
+            "Meet Spotter, your AI analyst":
+              "Meet AI Analyst, your AI analyst",
+            "Spotter is your AI analyst. It can answer questions you have about your data source and help you find insights quickly. To start analyzing, ask a business question about your data.":
+              "AI Analyst is your AI analyst. It can answer questions you have about your data source and help you find insights quickly. To start analyzing, ask a business question about your data.",
+          };
+
+          // Override ThoughtSpot translation IDs
+          const stringIDs = {
+            ...(context.stylingConfig.embeddedContent.stringIDs || {}),
+            "convassist.spotter.askSpotter": "AI Analyst",
+          };
 
           // Filter out visibleActions from embed flags to prevent conflicts with hiddenActions
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
